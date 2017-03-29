@@ -1,0 +1,11 @@
+# Files
+*.zip
+*.log
+*.gz
+*.pdf
+*.xml
+
+# Dir
+.idea/*
+/bootstrap/*
+/vendor/*
