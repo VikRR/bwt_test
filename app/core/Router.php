@@ -2,7 +2,7 @@
 
 namespace bwttest\app\core;
 
-class Router_
+class Router
 {
     //TODO: Singleton Pattern
     private $routes;
@@ -52,6 +52,7 @@ class Router_
 
                 return true;
             }else{
+                echo 'Error 404.';
                 //TODO: добавить вывод ошибки в случае если адрес не найден
             }
         }
