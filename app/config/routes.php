@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: viktor
- * Date: 25.03.17
- * Time: 13:42
- */
+
+return array(
+    ''             => 'index/index',
+    'registration' => 'form/registration',
+    'login'        => 'form/login',
+    'logout'       => 'form/logout',
+);
