@@ -1,0 +1,21 @@
+{
+    "name": "vikr/bwt_test",
+    "description": "Test task.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "VikRR",
+            "email": "rubetc.v.i@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "components/bootstrap": "^3.3"
+    },
+    "autoload":{
+        "psr-4":{
+            "bwttest\\":""
+        }
+    }
+}
