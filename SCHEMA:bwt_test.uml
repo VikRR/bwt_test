@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>e3958cd1-e142-44dc-a55f-b513ae025b24.SCHEMA:bwt_test</OriginalElement>
+  <nodes>
+    <node x="91.5" y="274.0">e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.comments</node>
+    <node x="0.0" y="60.0">e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.guests</node>
+    <node x="173.0" y="0.0">e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.users</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.comments" target="e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.guests">
+      <point x="-48.25" y="-76.0" />
+      <point x="139.75" y="249.0" />
+      <point x="76.5" y="249.0" />
+      <point x="0.0" y="52.0" />
+    </edge>
+    <edge source="e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.comments" target="e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.users">
+      <point x="48.25" y="-76.0" />
+      <point x="236.25" y="249.0" />
+      <point x="299.5" y="249.0" />
+      <point x="0.0" y="112.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="213.0" y="213.0" />
+  <SelectedNodes>
+    <node>e3958cd1-e142-44dc-a55f-b513ae025b24.TABLE:bwt_test.users</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+
