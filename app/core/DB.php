@@ -2,9 +2,20 @@
 
 namespace bwttest\app\core;
 
+/**
+ * Class DB pattern Singleton
+ *
+ * @package bwttest\app\core
+ */
 class DB
 {
+    /**
+     * @var \PDO
+     */
     private $pdo;
+    /**
+     * @var
+     */
     private static $_instance;
 
     private function __construct()
@@ -23,6 +34,10 @@ class DB
 
     }
 
+    /**
+     *
+     * @return DB
+     */
     public static function connect()
     {
         if (is_null(self::$_instance)) {
@@ -32,6 +47,12 @@ class DB
         return self::$_instance;
     }
 
+    /**
+     *
+     * @param $query
+     * @param array $param
+     * @return \PDOStatement
+     */
     public function execute($query, $param = [])
     {
         $stmt = $this->pdo->prepare($query);
