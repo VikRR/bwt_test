@@ -1,15 +1,28 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: viktor
- * Date: 27.03.17
- * Time: 11:37
- */
 
 namespace bwttest\app\controllers;
 
 
-class WeatherController
+use bwttest\app\core\Controller;
+
+/**
+ * Class WeatherController
+ * @package bwttest\app\controllers
+ */
+class WeatherController extends Controller
 {
+
+    /**
+     * Weather page
+     */
+    public function index()
+    {
+        $model = $this->model->load('weather');
+
+        $weather = $model->parse();
+
+        $this->view->load('weather/index', $weather);
+    }
+
 
 }
