@@ -2,9 +2,18 @@
 
 namespace bwttest\app\core;
 
+/**
+ * Class Router
+ * @package bwttest\app\core
+ */
 class Router
 {
-    //TODO: Singleton Pattern
+
+    /**
+     * Config file with routes
+     *
+     * @var mixed
+     */
     private $routes;
 
     public function __construct()
@@ -24,6 +33,9 @@ class Router
         }
     }
 
+    /**
+     * @return bool
+     */
     public function run()
     {
         $url = $this->getUrl();
@@ -52,7 +64,7 @@ class Router
 
                 return true;
             }else{
-                echo 'Error 404.';
+                //echo 'Error 404.';
                 //TODO: добавить вывод ошибки в случае если адрес не найден
             }
         }
