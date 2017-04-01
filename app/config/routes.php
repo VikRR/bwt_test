@@ -2,7 +2,10 @@
 
 return array(
     ''             => 'index/index',
-    'registration' => 'form/registration',
-    'login'        => 'form/login',
-    'logout'       => 'form/logout',
+    'registration' => 'auth/registration',
+    'login'        => 'auth/login',
+    'logout'       => 'auth/logout',
+    'weather'      => 'weather/index',
+    'comment'      => 'comment/index',
+    'feedback'     => 'comment/show',
 );
