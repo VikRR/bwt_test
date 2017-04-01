@@ -7,27 +7,27 @@
             <form role="form" action="registration" method="post">
                 <div class="form-group">
                     <label class="sr-only" for="first_name">Name</label>
-                    <input type="text" name="first_name" placeholder="First name..." class="form-control">
+                    <input type="text" name="first_name" placeholder="First name..." class="form-control" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <label class="sr-only" for="last_name">Last Name</label>
-                    <input type="text" name="last_name" placeholder="Last Name..." class="form-control">
+                    <input type="text" name="last_name" placeholder="Last Name..." class="form-control" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <label class="sr-only" for="email">Email</label>
-                    <input type="text" name="email" class="form-control" placeholder="Email">
+                    <input type="text" name="email" class="form-control" placeholder="Email" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <label class="sr-only" for="password">Password</label>
-                    <input type="password" name="password" placeholder="Password..." class="form-control">
+                    <input type="password" name="password" placeholder="Password..." class="form-control" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <label class="sr-only" for="repeat_password">Confirm Password</label>
-                    <input type="password" name="repeat_password" placeholder="Repeat Password..." class="form-control">
+                    <input type="password" name="repeat_password" placeholder="Repeat Password..." class="form-control" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <label class="sr-only" for="male">Sex</label>
-                    <input type="text" name="male%" placeholder="Male or Female..." class="form-control">
+                    <input type="text" name="male%" placeholder="Male or Female..." class="form-control" pattern="^male$|^female$">
                 </div><!-- form-group -->
                 <div class="form-group">
                     <label class="sr-only" for="birthday">Birthday</label>
