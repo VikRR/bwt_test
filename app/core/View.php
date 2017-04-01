@@ -14,10 +14,16 @@ class View
      */
     public function load($view, $data = [])
     {
-        include_once ROOT . '/app/views/layouts/header.php';
-        include_once ROOT . '/app/views/layouts/menu.php';
-        include_once ROOT . '/app/views/' . $view . '.php';
-        include_once ROOT . '/app/views/layouts/footer.php';
+        if($view == 'errors/error404'){
+            include_once ROOT . '/app/views/layouts/header.php';
+            include_once ROOT . '/app/views/' . $view . '.php';
+            include_once ROOT . '/app/views/layouts/footer.php';
+        }else{
+            include_once ROOT . '/app/views/layouts/header.php';
+            include_once ROOT . '/app/views/layouts/menu.php';
+            include_once ROOT . '/app/views/' . $view . '.php';
+            include_once ROOT . '/app/views/layouts/footer.php';
+        }
     }
 
     /**

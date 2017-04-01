@@ -2,6 +2,8 @@
 
 namespace bwttest\app\core;
 
+use bwttest\app\controllers\ErrorController;
+
 /**
  * Class Router
  * @package bwttest\app\core
@@ -63,9 +65,6 @@ class Router
                 }
 
                 return true;
-            }else{
-                //echo 'Error 404.';
-                //TODO: добавить вывод ошибки в случае если адрес не найден
             }
         }
     }

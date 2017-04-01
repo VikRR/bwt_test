@@ -5,6 +5,7 @@
  */
 
 
+use bwttest\app\controllers\ErrorController;
 use bwttest\app\core\Router;
 
 error_reporting(E_ALL);
@@ -21,7 +22,14 @@ try{
 
         $router = new Router();
 
-        $router->run();
+        if($router->run()){
+            $router->run();
+        }else{
+            $error = new ErrorController();
+
+            $error->error404();
+        }
+
 
     } catch (PDOException $e) {
         echo $e->getMessage();

@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>bwt-test</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Frijole" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Frijole|Lato" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="../../../web/css/app.css" rel="stylesheet">
