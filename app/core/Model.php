@@ -53,14 +53,13 @@ class Model
     }
 
     /**
-     * Select of all data from the table
-     *
-     * @param array $param
+     * @param $sql
+     * @param array $params
      * @return array
      */
-    public function findAll($param=[])
+    public function getAll($sql, $params = [])
     {
-        $stmt = $this->query("SELECT * FROM $this->table", $param);
+        $stmt = $this->query($sql, $params);
 
         $res = $stmt->fetchAll();
 
@@ -68,14 +67,13 @@ class Model
     }
 
     /**
-     * Check for the presence of email in the table
-     *
-     * @param $data
+     * @param $sql
+     * @param array $params
      * @return mixed
      */
-    public function uniqueEmail($data)
+    public function get($sql, $params = [])
     {
-        $stmt = $this->query("SELECT COUNT(email) as `count` FROM $this->table WHERE email=?", $data);
+        $stmt = $this->query($sql, $params);
 
         $res = $stmt->fetch();
 
