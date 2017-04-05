@@ -11,17 +11,17 @@ class Session
     /**
      * Add a user entry in the session
      *
-     * @param $username
-     * @param $userid
+     * @param array $data
      */
-    public static function add($username, $userid)
+    public static function add($data)
     {
-        if(self::checkSession()){
+        if (self::checkSession()) {
             session_destroy();
         }
         session_start();
-        $_SESSION['username'] = $username;
-        $_SESSION['userid'] = $userid;
+        foreach ($data as $k => $v) {
+            $_SESSION[$k] = $v;
+        }
     }
 
     /**
@@ -41,7 +41,7 @@ class Session
      */
     public static function checkSession()
     {
-        if (!empty($_SESSION['username'])) {
+        if (!empty($_SESSION)) {
 
             return true;
         } else {
