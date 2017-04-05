@@ -5,13 +5,12 @@ namespace bwttest\app\controllers;
 
 use bwttest\app\core\Controller;
 
+/**
+ * Class ErrorController
+ * @package bwttest\app\controllers
+ */
 class ErrorController extends Controller
 {
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     public function error404()
     {

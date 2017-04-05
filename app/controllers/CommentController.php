@@ -17,14 +17,7 @@ use ReCaptcha\ReCaptcha;
  */
 class CommentController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
-    /**
-     *
-     */
     public function index()
     {
         if (!isset($_POST['add_comment'])) {
@@ -72,7 +65,9 @@ class CommentController extends Controller
 
             $guest = new Guest();
 
-            if ($guest->uniqueEmail(array($input['email'])) == 0) {
+            $unique = $guest->uniqueEmail(array($input['email']));
+
+            if ($unique['count'] == 0) {
                 $guest->insertGuest($data);
             }
 
@@ -134,6 +129,4 @@ class CommentController extends Controller
 
         $this->view->load('feedback/index', $data);
     }
-
-
 }

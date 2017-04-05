@@ -11,13 +11,6 @@ use bwttest\app\core\Controller;
  */
 class IndexController extends Controller
 {
-    /**
-     * IndexController constructor.
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     /**
      * Main page

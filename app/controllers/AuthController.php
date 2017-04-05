@@ -13,10 +13,6 @@ use bwttest\app\core\Validation;
  */
 class AuthController extends Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     /**
      * Registration
@@ -93,12 +89,16 @@ class AuthController extends Controller
                 throw new \Exception('Email is not correct, please enter another email.');
             }
 
-            if(!password_verify($input['password'], $user['password'])){
+            if (!password_verify($input['password'], $user['password'])) {
                 throw new \Exception('Password is not correct.');
-            }else{
-                $username = $user['first_name'].' '.$user['last_name'];
+            } else {
+                $username = $user['first_name'] . ' ' . $user['last_name'];
 
-                Session::add($username, $user['id']);
+                $data ['username'] = $username;
+
+                $data['userid'] = $user['id'];
+
+                Session::add($data);
 
                 header('Location: weather');
             }
