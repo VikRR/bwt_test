@@ -44,9 +44,10 @@ class Comment extends Model
      */
     public function usersComments()
     {
-        $stmt = $this->pdo->execute('SELECT us.first_name, us.last_name, co.comment, co.date_create FROM comments co, users us WHERE co.user_id = us.id ORDER BY co.date_create');
-
-        $res = $stmt->fetchAll();
+        $res = $this->getAll('SELECT us.first_name, us.last_name, co.comment, co.date_create 
+                                  FROM comments co, users us 
+                                  WHERE co.user_id = us.id 
+                                  ORDER BY co.date_create');
 
         return $res;
     }
@@ -58,9 +59,10 @@ class Comment extends Model
      */
     public function guestsComments()
     {
-        $stmt = $this->pdo->execute('SELECT gu.guest, co.comment, co.date_create FROM comments co, guests gu WHERE co.guest_id = gu.id ORDER BY co.date_create');
-
-        $res = $stmt->fetchAll();
+        $res = $this->getAll('SELECT gu.guest, co.comment, co.date_create 
+                                  FROM comments co, guests gu 
+                                  WHERE co.guest_id = gu.id 
+                                  ORDER BY co.date_create');
 
         return $res;
     }

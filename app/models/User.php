@@ -30,7 +30,8 @@ class User extends Model
      */
     public function insertUser($params = [])
     {
-        $stmt = $this->query("INSERT INTO $this->table (first_name, last_name, email, password, male, birthday) VALUES (:first_name, :last_name, :email, :password, :male, :birthday)",
+        $stmt = $this->query("INSERT INTO $this->table (first_name, last_name, email, password, male, birthday) 
+                                  VALUES (:first_name, :last_name, :email, :password, :male, :birthday)",
             $params);
 
         return $stmt;
@@ -44,9 +45,7 @@ class User extends Model
      */
     public function login($data)
     {
-        $stmt = $this->query("SELECT * FROM $this->table WHERE email=:email", $data);
-
-        $res = $stmt->fetch();
+        $res = $this->get("SELECT * FROM $this->table WHERE email=:email", $data);
 
         return $res;
     }

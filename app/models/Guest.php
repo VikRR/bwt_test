@@ -43,9 +43,23 @@ class Guest extends Model
      */
     public function find($data)
     {
-        $stmt = $this->query("SELECT id FROM $this->table WHERE email = ?", $data);
+        $res = $this->get("SELECT id FROM $this->table WHERE email = ?", $data);
 
-        $res = $stmt->fetch();
+        return $res;
+    }
+
+    /**
+     * Check for the presence of email in the table
+     *
+     * @param $data
+     * @return mixed
+     */
+    public function uniqueEmail($data)
+    {
+
+        //print '<pre>'; print_r($data);exit;
+
+        $res = $this->get("SELECT COUNT(email) as `count` FROM $this->table WHERE email=?", $data);
 
         return $res;
     }

@@ -3,13 +3,11 @@
 namespace bwttest\app\models;
 
 
-use bwttest\app\core\Model;
-
 /**
  * Class Weather
  * @package bwttest\app\models
  */
-class Weather extends Model
+class Weather
 {
     /**
      * @param $url
