@@ -2,7 +2,6 @@
 
 namespace bwttest\app\core;
 
-use bwttest\app\controllers\ErrorController;
 
 /**
  * Class Router
