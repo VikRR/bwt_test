@@ -52,15 +52,19 @@ class Guest extends Model
      * Check for the presence of email in the table
      *
      * @param $data
-     * @return mixed
+     * @return boolean
      */
     public function uniqueEmail($data)
     {
 
-        //print '<pre>'; print_r($data);exit;
-
         $res = $this->get("SELECT COUNT(email) as `count` FROM $this->table WHERE email=?", $data);
 
-        return $res;
+        if($res['count'] == 0){
+
+            return true;
+        }else{
+
+            return false;
+        }
     }
 }

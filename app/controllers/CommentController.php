@@ -65,9 +65,7 @@ class CommentController extends Controller
 
             $guest = new Guest();
 
-            $unique = $guest->uniqueEmail(array($input['email']));
-
-            if ($unique['count'] == 0) {
+            if ($guest->uniqueEmail(array($input['email']))) {
                 $guest->insertGuest($data);
             }
 
